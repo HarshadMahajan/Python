@@ -1,0 +1,26 @@
+mat=[]
+result=False
+r=int(input("Enter the Rows count :"))
+c=int(input("Enter the columns count :"))
+if(r == c):
+    for i in range(r):
+        mat1=[]
+        for j in range(c):
+            mat1.append(int(input("Enter the values for matrix :"+str(i)+" "+str(j)+" ")))
+        print()
+        mat.append(mat1)
+    for i in range(r):
+        for j in range(c):
+            if(i==j and mat[i][j] == 1):
+                result = True
+            elif(i!=j and mat[i][j] == 0):
+                result = True
+            else:
+                result = False
+                break
+    if(result):
+        print("Identity Matrix")
+    else:
+        print("Not Identity Matrix")
+else:
+    print("Need squared Matrix")
